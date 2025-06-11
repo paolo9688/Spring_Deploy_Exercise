@@ -1,0 +1,25 @@
+spring.application.name=deploy-exercise
+
+---
+server:
+  port: 5000
+
+spring:
+  profiles:
+    active: default
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
+  port: 7070
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 4000
